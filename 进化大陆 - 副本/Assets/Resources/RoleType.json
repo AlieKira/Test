@@ -1,0 +1,79 @@
+{
+  "infoList": [
+    {
+      "roleTypeString": "Archer",
+      "prefabPath": "RolePrefab/Archer Male 01",
+      "imagePath": "RoleImage/m_03",
+      "skill_01ImagePath": "SkillImage/00177",
+      "skill_02ImagePath": "",
+      "skill_03ImagePath": "SkillImage/00098",
+      "attack": "13",
+      "defence": "7",
+      "maxHP": "100",
+      "maxMP": "100",
+      "skill_01Message": "<color=black>神之祝福</color>\n<size=19><color=black>消耗：</color><color=blue>无消耗</color></size>\n<color=green>提供20%暴击率</color>",
+      "skill_02Message": "<color=black>快速射击</color>\n<size=19><color=black>消耗：</color><color=blue>20</color></size>\n<color=green>5秒内提高攻击速度30%</color>",
+      "skill_03Message": "<color=black>龙之矢</color>\n<size=19><color=black>消耗：</color><color=blue>50</color></size>\n<color=green>蓄力2秒后，全力发出攻击力巨大的一击，\n基础伤害250</color>"
+    },
+    {
+      "roleTypeString": "Barbarian",
+      "prefabPath": "RolePrefab/Barbarian Male 01",
+      "imagePath": "RoleImage/m_25",
+      "skill_01ImagePath": "SkillImage/00022",
+      "skill_02ImagePath": "SkillImage/00028",
+      "skill_03ImagePath": "SkillImage/00008",
+      "attack": "5",
+      "defence": "15",
+      "maxHP": "200",
+      "maxMP": "90",
+      "skill_01Message": "<color=black>皮糙肉厚</color>\n<size=19><color=black>消耗：</color><color=blue>无消耗</color></size>\n<color=green>额外增加20%血量</color>",
+      "skill_02Message": "<color=black>巨神之力</color>\n<size=19><color=black>消耗：</color><color=blue>20</color></size>\n<color=green>5秒内增加20%攻击力</color>",
+      "skill_03Message": "<color=black>死亡旋转</color>\n<size=19><color=black>消耗：</color><color=blue>50</color></size>\n<color=green>移动的同时高速旋转，对周围每秒\n造成100%基础伤害</color>"
+    },
+    {
+      "roleTypeString": "Casual",
+      "prefabPath": "RolePrefab/Halloween Male 01",
+      "imagePath": "RoleImage/m_02",
+      "skill_01ImagePath": "SkillImage/00178",
+      "skill_02ImagePath": "SkillImage/00137",
+      "skill_03ImagePath": "SkillImage/00041",
+      "attack": "8",
+      "defence": "8",
+      "maxHP": "100",
+      "maxMP": "70",
+      "skill_01Message": "<color=black>均衡之力</color>\n<size=19><color=black>消耗：</color><color=blue>无消耗</color></size>\n<color=green>各项属性提高10%</color>",
+      "skill_02Message": "<color=black>众生平等</color>\n<size=19><color=black>消耗：</color><color=blue>20</color></size>\n<color=green>5秒内，将对方数值最高的属性的数值，\n复制到自身所对应的属性上</color>",
+      "skill_03Message": "<color=black>全力一击</color>\n<size=19><color=black>消耗：</color><color=blue>50</color></size>\n<color=green>使用后下次攻击造成双倍伤害</color>"
+    },
+    {
+      "roleTypeString": "Knight",
+      "prefabPath": "RolePrefab/Knight Male 01",
+      "imagePath": "RoleImage/m_07",
+      "skill_01ImagePath": "SkillImage/00018",
+      "skill_02ImagePath": "SkillImage/00025",
+      "skill_03ImagePath": "SkillImage/00040",
+      "attack": "10",
+      "defence": "10",
+      "maxHP": "150",
+      "maxMP": "120",
+      "skill_01Message": "<color=black>守护之力</color>\n<size=19><color=black>消耗：</color><color=blue>无消耗</color></size>\n<color=green>所受伤害减少10%</color>",
+      "skill_02Message": "<color=black>防御强化</color>\n<size=19><color=black>消耗：</color><color=blue>20</color></size>\n<color=green>5秒内所受伤害减少20%</color>",
+      "skill_03Message": "<color=black>神圣之盾</color>\n<size=19><color=black>消耗：</color><color=blue>50</color></size>\n<color=green>生成一个护盾，免疫接下来\n所受的三次攻击</color>"
+    },
+    {
+      "roleTypeString": "Mage",
+      "prefabPath": "RolePrefab/Wizard Male 01",
+      "imagePath": "RoleImage/m_26",
+      "skill_01ImagePath": "SkillImage/00137",
+      "skill_02ImagePath": "SkillImage/00114",
+      "skill_03ImagePath": "SkillImage/00105",
+      "attack": "15",
+      "defence": "5",
+      "maxHP": "100",
+      "maxMP": "200",
+      "skill_01Message": "<color=black>元素祝福</color>\n<size=19><color=black>消耗：</color><color=blue>无消耗</color></size>\n<color=green>攻击力提高20%</color>",
+      "skill_02Message": "<color=black>超负荷</color>\n<size=19><color=black>消耗：</color><color=blue>20</color></size>\n<color=green>5秒内攻击力提高50%</color>",
+      "skill_03Message": "<color=black>元素爆炸</color>\n<size=19><color=black>消耗：</color><color=blue>80</color></size>\n<color=green>制造一个能量球并砸向敌人，\n造成300%伤害</color>"
+    }
+  ]
+}

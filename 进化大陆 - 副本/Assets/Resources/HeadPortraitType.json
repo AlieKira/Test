@@ -1,0 +1,44 @@
+{
+  "infoList": [
+    {
+      "imageTypeString": "m_01",
+      "path": "HeadPortrait/m_01"
+    },
+    {
+      "imageTypeString": "m_02",
+      "path": "HeadPortrait/m_02"
+    },
+    {
+      "imageTypeString": "m_03",
+      "path": "HeadPortrait/m_03"
+    },
+    {
+      "imageTypeString": "m_04",
+      "path": "HeadPortrait/m_04"
+    },
+    {
+      "imageTypeString": "m_05",
+      "path": "HeadPortrait/m_05"
+    },
+    {
+      "imageTypeString": "m_06",
+      "path": "HeadPortrait/m_06"
+    },
+    {
+      "imageTypeString": "m_07",
+      "path": "HeadPortrait/m_07"
+    },
+    {
+      "imageTypeString": "m_08",
+      "path": "HeadPortrait/m_08"
+    },
+    {
+      "imageTypeString": "m_09",
+      "path": "HeadPortrait/m_09"
+    },
+    {
+      "imageTypeString": "m_10",
+      "path": "HeadPortrait/m_10"
+    }
+  ]
+}

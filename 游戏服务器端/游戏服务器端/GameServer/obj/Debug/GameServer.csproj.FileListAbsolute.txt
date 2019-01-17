@@ -1,0 +1,13 @@
+E:\VisualStudioDocuments\游戏服务器端\游戏服务器端\GameServer\obj\Debug\GameServer.csprojAssemblyReference.cache
+E:\VisualStudioDocuments\游戏服务器端\游戏服务器端\GameServer\obj\Debug\GameServer.csproj.CoreCompileInputs.cache
+E:\VisualStudioDocuments\游戏服务器端\游戏服务器端\GameServer\bin\Debug\GameServer.exe.config
+E:\VisualStudioDocuments\游戏服务器端\游戏服务器端\GameServer\bin\Debug\GameServer.exe
+E:\VisualStudioDocuments\游戏服务器端\游戏服务器端\GameServer\bin\Debug\GameServer.pdb
+E:\VisualStudioDocuments\游戏服务器端\游戏服务器端\GameServer\bin\Debug\Common.dll
+E:\VisualStudioDocuments\游戏服务器端\游戏服务器端\GameServer\bin\Debug\MySql.Data.dll
+E:\VisualStudioDocuments\游戏服务器端\游戏服务器端\GameServer\bin\Debug\Google.Protobuf.dll
+E:\VisualStudioDocuments\游戏服务器端\游戏服务器端\GameServer\bin\Debug\Common.pdb
+E:\VisualStudioDocuments\游戏服务器端\游戏服务器端\GameServer\bin\Debug\MySql.Data.xml
+E:\VisualStudioDocuments\游戏服务器端\游戏服务器端\GameServer\obj\Debug\GameServer.csproj.CopyComplete
+E:\VisualStudioDocuments\游戏服务器端\游戏服务器端\GameServer\obj\Debug\GameServer.exe
+E:\VisualStudioDocuments\游戏服务器端\游戏服务器端\GameServer\obj\Debug\GameServer.pdb

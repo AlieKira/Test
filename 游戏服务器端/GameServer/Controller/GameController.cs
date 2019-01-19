@@ -109,6 +109,10 @@ namespace GameServer.Controller
 
         public void Attack(string data, Client client, Server server)
         {
+            if (client.Room==null)
+            {
+                return;
+            }
             bool isDead;
             string[] strs = data.Split(',');
             if (int.Parse(strs[0])!=0)   //攻击目标为怪物
@@ -162,11 +166,10 @@ namespace GameServer.Controller
         {
             if (client.Room == null)
             {
-                return;
+               return;
             }
             int id = int.Parse(data);                //得到被攻击玩家的userid
             Console.WriteLine("玩家:"+id+"，被攻击");
-            Console.WriteLine(client.Room.GetClientsCount());
             
             foreach (Client temp in client.Room.GetClientDic().Values)
             {
@@ -175,8 +178,7 @@ namespace GameServer.Controller
                    int hp= temp.attri.TakeDamage(monsterAttri.GetAttack(monsterType));
                     if (temp.attri.IsDead())                
                     {
-                        Console.WriteLine("isdead");
-                        Console.WriteLine(temp.GetUserId());
+                        Console.WriteLine("isdead:"+temp.GetUserId()+","+temp.Room.GetClientDic().Count);
                         deadClient = temp;
                         //广播该玩家死亡
                         client.Room.BroadcastMessage(null, ActionCode.RoleDead, id.ToString());
@@ -185,7 +187,7 @@ namespace GameServer.Controller
                     }
                     else
                     {
-                        //从玩家列表中移除死亡玩家
+
                         client.Room.BroadcastMessage(null, ActionCode.RoleTakeDamage, id + "," + hp);
                     }
                     
@@ -194,6 +196,7 @@ namespace GameServer.Controller
 
             if (deadClient!=null)
             {
+                //从玩家列表中移除死亡玩家
                 client.Room.AddDeadClient(deadClient);
                 deadClient = null;
             }

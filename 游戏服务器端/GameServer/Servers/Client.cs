@@ -65,13 +65,9 @@ namespace GameServer.Servers
                 if (clientSocket == null || clientSocket.Connected == false) return;
                 int count = clientSocket.EndReceive(ar);
                 if (isgetid&&GetUserId()==1)
-                {
-                    Console.WriteLine("," + count);
-                }
                 
                 if (count <= 0)
                 {
-                    Console.WriteLine("count<=0");
                     Close();
                 }
                 msg.ReadMessage(count,OnProcessCallBack);

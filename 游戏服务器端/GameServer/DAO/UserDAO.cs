@@ -78,9 +78,10 @@ namespace GameServer.DAO
             MySqlDataReader reader;
             try
             {
-                MySqlCommand cmd=new MySqlCommand("insert into user set username=@username , password=@password",conn);
+                MySqlCommand cmd=new MySqlCommand("insert into user set username=@username , password=@password,userid=username", conn);
                 cmd.Parameters.AddWithValue("username", username);
                 cmd.Parameters.AddWithValue("password", password);
+                cmd.Parameters.AddWithValue("userid", username);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)

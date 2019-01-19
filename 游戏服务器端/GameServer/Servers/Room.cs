@@ -120,6 +120,7 @@ namespace GameServer.Servers
                 {
                     if (client != excludeClient)
                     {
+                        Console.WriteLine("广播+"+actionCode.ToString());
                         server.SendRespond(client, actionCode, data);
                     }
                 }

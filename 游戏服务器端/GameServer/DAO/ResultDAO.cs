@@ -54,13 +54,13 @@ namespace GameServer.DAO
                 MySqlCommand cmd;
                 if (result.ID==-1)
                 {
-                     cmd=new MySqlCommand("insert into result set userid=@userid,totalcount=@totalcount,wincount=@wincount",conn);
+                     cmd=new MySqlCommand("insert into result set id=@id, userid=@userid,totalcount=@totalcount,wincount=@wincount",conn);
                 }
                 else
                 {
                     cmd = new MySqlCommand("update result set totalcount=@totalcount,wincount=@wincount where userid=@userid", conn);
                 }
-
+                cmd.Parameters.AddWithValue("id", result.userID);
                 cmd.Parameters.AddWithValue("userid", result.userID);
                 cmd.Parameters.AddWithValue("totalcount", result.totalCount);
                 cmd.Parameters.AddWithValue("wincount", result.winCount);

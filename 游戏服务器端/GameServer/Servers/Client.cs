@@ -20,7 +20,7 @@ namespace GameServer.Servers
         public MySqlConnection conn;
         private Message msg = new Message();
         private User user;
-        private Result result;
+        public Result result;
         public int isPrepare=1;  //0=true,1=false
         private Room room;
 

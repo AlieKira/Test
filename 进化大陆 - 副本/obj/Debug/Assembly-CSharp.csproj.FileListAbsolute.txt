@@ -1,0 +1,2 @@
+E:\UnityDocuments\进化大陆\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+E:\UnityDocuments\进化大陆\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

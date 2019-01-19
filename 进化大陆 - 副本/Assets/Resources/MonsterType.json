@@ -1,0 +1,16 @@
+﻿{
+  "infoList": [
+    {
+      "monsterTypeString": "Cactus",
+      "prefabPath": "MonsterPrefab/Toon Cactus Monster-Magenta"
+    },
+    {
+      "monsterTypeString": "PlantMonster",
+      "prefabPath": "MonsterPrefab/Toon Plant Monster-Purple"
+    },
+    {
+      "monsterTypeString": "RockGolem",
+      "prefabPath": "MonsterPrefab/Toon Rock Golem-Green"
+    }
+  ] 
+}

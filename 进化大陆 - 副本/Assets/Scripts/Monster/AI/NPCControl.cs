@@ -11,18 +11,17 @@ public class NPCControl : MonoBehaviour
     private FSMSystem fsm;
     private NavMeshAgent navAgent;
 
-    public GameObject thisGO;
-
+    private Vector3 originalPos;
 
     private GameObject[] waypoints;
 
     // Use this for initialization
     void Start()
     {
+        originalPos = this.gameObject.transform.position;
         playerList =new List<GameObject>();
-        monsterData = thisGO.GetComponent<MonsterData>();
-        waypoints = GameObject.FindGameObjectsWithTag("WayPoint");
-        navAgent = thisGO.GetComponent<NavMeshAgent>();
+        monsterData = this.gameObject.GetComponent<MonsterData>();
+        navAgent = this.gameObject.GetComponent<NavMeshAgent>();
         InitFSM();
     }
 
@@ -33,13 +32,15 @@ public class NPCControl : MonoBehaviour
     {
         fsm = new FSMSystem();
 
-        PatrolState patrolState = new PatrolState(waypoints[monsterData.number].transform.position, thisGO);
+        PatrolState patrolState = new PatrolState(originalPos, this.gameObject);
         patrolState.AddTransition(Transition.SawPlayer, StateID.Chase);
         patrolState.SetNavAgent(navAgent);
 
-        ChaseState chaseState = new ChaseState(thisGO);
+        ChaseState chaseState = new ChaseState(this.gameObject);
         chaseState.AddTransition(Transition.LostPlayer, StateID.Patrol);
         chaseState.SetNavAgent(navAgent);
+        this.transform.GetComponent<SphereCollider>().enabled = true;
+
 
 
         fsm.AddState(patrolState);
@@ -47,7 +48,7 @@ public class NPCControl : MonoBehaviour
 
         fsm.Start(StateID.Patrol);
     }
-    void Update()
+    void FixedUpdate()
     {
         fsm.CurrentState.DoUpdate();
     }
@@ -106,4 +107,11 @@ public class NPCControl : MonoBehaviour
         }
 
     }
+
+    public void TakeDamage(int damage)
+    {
+         transform.GetComponent<MonsterData>().reduceHP(damage);
+    }
+
+
 }

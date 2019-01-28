@@ -191,12 +191,9 @@ GameObject:
   - component: {fileID: 4850111097870316}
   - component: {fileID: 95315131792205534}
   - component: {fileID: 114250792631304832}
-  - component: {fileID: 114776240411689768}
-  - component: {fileID: 114607542175696370}
   - component: {fileID: 114195021471968070}
   - component: {fileID: 54748355804146628}
   - component: {fileID: 136014259019540436}
-  - component: {fileID: 114749835796923564}
   m_Layer: 0
   m_Name: Knight Male 01
   m_TagString: Player
@@ -1428,17 +1425,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1256476030042756}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7c4697f3750fc4687b9701dac45efd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDis: 2
   originDis: 0.2
-  stopDis: 0.2
   isAttack: 0
   isAttacking: 0
-  attackRequest: {fileID: 0}
 --- !u!114 &114250792631304832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1450,9 +1444,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b90f6b993b6e47e4aa6b9ed716fb3dd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userID: 0
   isLocal: 0
+  roleType: 0
+  attackPrefab: 
+  currentHP: 0
+  exp: 0
   slider: {fileID: 114404456946338276}
+  strength: 0
+  intellect: 0
+  agility: 0
+  stamina: 0
+  attack: 0
 --- !u!114 &114404456946338276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1560,27 +1562,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b5a4d7a85af9044b7485f2e1f3cc04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114607542175696370
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1256476030042756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 1
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
 --- !u!114 &114662944286625500
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1654,49 +1635,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114749835796923564
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1256476030042756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5bb22d900e6589429107d7cfb98411c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114776240411689768
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1256476030042756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 77
-    i1: 160
-    i2: 111
-    i3: 228
-    i4: 111
-    i5: 198
-    i6: 48
-    i7: 196
-    i8: 73
-    i9: 200
-    i10: 155
-    i11: 109
-    i12: 234
-    i13: 184
-    i14: 234
-    i15: 18
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
 --- !u!114 &114895434833587302
 MonoBehaviour:
   m_ObjectHideFlags: 1

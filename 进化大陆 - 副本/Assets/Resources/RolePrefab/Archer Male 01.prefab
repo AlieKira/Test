@@ -36,11 +36,8 @@ GameObject:
   - component: {fileID: 4149485739048908}
   - component: {fileID: 95105050697601654}
   - component: {fileID: 114707252969573598}
-  - component: {fileID: 114481560289840078}
-  - component: {fileID: 114800591118594534}
   - component: {fileID: 54801097051689226}
   - component: {fileID: 136169846788032224}
-  - component: {fileID: 114959943139753434}
   - component: {fileID: 114635901315210156}
   m_Layer: 0
   m_Name: Archer Male 01
@@ -1526,38 +1523,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114481560289840078
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1062909205087760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 148
-    i1: 181
-    i2: 15
-    i3: 20
-    i4: 7
-    i5: 240
-    i6: 87
-    i7: 84
-    i8: 88
-    i9: 123
-    i10: 153
-    i11: 28
-    i12: 180
-    i13: 50
-    i14: 162
-    i15: 183
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
 --- !u!114 &114572014384832570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1610,17 +1575,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1062909205087760}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7c4697f3750fc4687b9701dac45efd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDis: 2
   originDis: 0.2
-  stopDis: 0.2
   isAttack: 0
   isAttacking: 0
-  attackRequest: {fileID: 0}
 --- !u!114 &114707252969573598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1633,28 +1595,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLocal: 0
+  roleType: 0
+  attackPrefab: 
+  currentHP: 0
+  exp: 0
   slider: {fileID: 114222845716546468}
---- !u!114 &114800591118594534
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1062909205087760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 1
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
+  strength: 0
+  intellect: 0
+  agility: 0
+  stamina: 0
+  attack: 0
 --- !u!114 &114919488012195414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1682,17 +1632,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114959943139753434
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1062909205087760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5bb22d900e6589429107d7cfb98411c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &136169846788032224
 CapsuleCollider:
   m_ObjectHideFlags: 1

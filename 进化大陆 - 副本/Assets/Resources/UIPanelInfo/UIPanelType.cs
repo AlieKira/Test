@@ -11,8 +11,13 @@ public enum UIPanelType  {
     OriginalPanel,
     RegisterPanel,
     RoomItem,
-    RoomListPanel,
-    RoomPanel,
-    HeadPortraitPanel,
-    ToolTip
+    PausePanel,
+    MenuPanel,
+    OverPanel,
+    ToolTip,
+    RecordPanel,
+    CharacterPanel,
+    ShopPanel,
+    CareerPanel,
+    KnapsackPanel
 }

@@ -128,12 +128,9 @@ GameObject:
   - component: {fileID: 4258861227500826}
   - component: {fileID: 95751199901745160}
   - component: {fileID: 114562928554166902}
-  - component: {fileID: 114462712358242536}
-  - component: {fileID: 114807131870494484}
   - component: {fileID: 114361441964819908}
   - component: {fileID: 54526322710219222}
   - component: {fileID: 136565417394040936}
-  - component: {fileID: 114980991234939114}
   m_Layer: 0
   m_Name: Wizard Male 01
   m_TagString: Player
@@ -1467,49 +1464,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1100534380084122}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7c4697f3750fc4687b9701dac45efd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDis: 2
   originDis: 0.2
-  stopDis: 0.2
   isAttack: 0
   isAttacking: 0
-  attackRequest: {fileID: 0}
---- !u!114 &114462712358242536
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1100534380084122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 222
-    i1: 71
-    i2: 93
-    i3: 105
-    i4: 146
-    i5: 142
-    i6: 136
-    i7: 148
-    i8: 185
-    i9: 32
-    i10: 12
-    i11: 208
-    i12: 158
-    i13: 143
-    i14: 3
-    i15: 36
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
 --- !u!114 &114512883340263288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1569,9 +1531,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b90f6b993b6e47e4aa6b9ed716fb3dd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userID: 0
   isLocal: 0
+  roleType: 0
+  attackPrefab: 
+  currentHP: 0
+  exp: 0
   slider: {fileID: 114834952198218110}
+  strength: 0
+  intellect: 0
+  agility: 0
+  stamina: 0
+  attack: 0
 --- !u!114 &114676137224001764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1601,27 +1571,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roleLv: {fileID: 0}
   roleData: {fileID: 114562928554166902}
---- !u!114 &114807131870494484
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1100534380084122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 1
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
 --- !u!114 &114834952198218110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1714,17 +1663,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u5347\u7EA7"
---- !u!114 &114980991234939114
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1100534380084122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5bb22d900e6589429107d7cfb98411c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &136565417394040936
 CapsuleCollider:
   m_ObjectHideFlags: 1

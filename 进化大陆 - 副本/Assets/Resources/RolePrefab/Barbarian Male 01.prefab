@@ -435,12 +435,9 @@ GameObject:
   - component: {fileID: 4753162859700212}
   - component: {fileID: 95199627012948868}
   - component: {fileID: 114300212407414784}
-  - component: {fileID: 114481895403522078}
-  - component: {fileID: 114543107852489404}
   - component: {fileID: 114587485656679972}
   - component: {fileID: 54913599887625084}
   - component: {fileID: 136701225149745396}
-  - component: {fileID: 114742237027992788}
   m_Layer: 0
   m_Name: Barbarian Male 01
   m_TagString: Player
@@ -1498,9 +1495,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b90f6b993b6e47e4aa6b9ed716fb3dd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userID: 0
   isLocal: 0
+  roleType: 0
+  attackPrefab: 
+  currentHP: 0
+  exp: 0
   slider: {fileID: 114544823457964486}
+  strength: 0
+  intellect: 0
+  agility: 0
+  stamina: 0
+  attack: 0
 --- !u!114 &114360228894097290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1528,59 +1533,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114481895403522078
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1711392692838610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 29
-    i1: 188
-    i2: 166
-    i3: 241
-    i4: 154
-    i5: 149
-    i6: 70
-    i7: 100
-    i8: 73
-    i9: 219
-    i10: 94
-    i11: 184
-    i12: 189
-    i13: 79
-    i14: 27
-    i15: 170
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
---- !u!114 &114543107852489404
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1711392692838610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 1
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
 --- !u!114 &114544823457964486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1651,17 +1603,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1711392692838610}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7c4697f3750fc4687b9701dac45efd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDis: 2
   originDis: 0.2
-  stopDis: 0.2
   isAttack: 0
   isAttacking: 0
-  attackRequest: {fileID: 0}
 --- !u!114 &114620831349078652
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1683,17 +1632,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114742237027992788
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1711392692838610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5bb22d900e6589429107d7cfb98411c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114754243494986800
 MonoBehaviour:
   m_ObjectHideFlags: 1

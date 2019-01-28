@@ -8,13 +8,12 @@ public class PatrolState : FSMState
     private Vector3 targetPos;
     private GameObject npc;
     private Rigidbody npcRd;
-    
+
 
 
 
     public PatrolState(Vector3 pos, GameObject npc)
     {
-        
         stateID = StateID.Patrol;
         targetPos = pos;
         this.npc = npc;
@@ -23,50 +22,49 @@ public class PatrolState : FSMState
 
     public override void DoBeforeEntering(GameObject player)
     {
+        navAgent.speed = 3.5f;
         navAgent.destination = targetPos;
         targetPlayer = player;
-        Debug.Log("Entering state " + ID);
     }
 
     public override void DoBeforeLeaving()
     {
         fsm.targetPlayer = this.targetPlayer;
+        npc.GetComponent<Animator>().SetBool("Forward", false);
     }
 
     public override void DoUpdate()
     {
-        CheckTransition();
         PatrolMove();
+        CheckTransition();
 
     }
     //检查转换条件
     private void CheckTransition()
     {
-        if (targetPlayer!=null)
+        if (targetPlayer != null)
         {
             fsm.PerformTransition(Transition.SawPlayer);
         }
-        //if (Vector3.Distance(player.transform.position, npc.transform.position) < 5)
-        //{
-        //    fsm.PerformTransition(Transition.SawPlayer);
-        //}
     }
+
     private void PatrolMove()
     {
-        if (Vector3.Distance(npc.transform.position, targetPos) < 0.5)
+        if (npc.transform.position == targetPos)
         {
-            navAgent.speed=0;
+            return;
+        }
+        if (Vector3.Distance(npc.transform.position, targetPos) > 0.2f)
+        {
+            if (!npc.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Forward"))
+            {
+                npc.GetComponent<Animator>().SetBool("Forward", true);
+            }
         }
         else
         {
-            navAgent.speed = 3.5f;
+            npc.GetComponent<Animator>().SetBool("Forward", false);
+            npc.transform.position = targetPos;
         }
-
-
-        
-        //npcRd.velocity = npc.transform.forward * 3;
-        //targetPos.y = npc.transform.position.y;
-        //npc.transform.LookAt(targetPos);
-
     }
 }

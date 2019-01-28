@@ -9,8 +9,8 @@
       "path": "UIPanel/GamePanel"
     },
     {
-      "panelTypeString": "LoginPanel",
-      "path": "UIPanel/LoginPanel"
+      "panelTypeString": "RecordPanel",
+      "path": "UIPanel/RecordPanel"
     },
     {
       "panelTypeString": "MessagePanel",
@@ -21,28 +21,36 @@
       "path": "UIPanel/OriginalPanel"
     },
     {
-      "panelTypeString": "RegisterPanel",
-      "path": "UIPanel/RegisterPanel"
+      "panelTypeString": "MenuPanel",
+      "path": "UIPanel/MenuPanel"
     },
     {
       "panelTypeString": "RoomItem",
       "path": "UIPanel/RoomItem"
     },
     {
-      "panelTypeString": "RoomListPanel",
-      "path": "UIPanel/RoomListPanel"
+      "panelTypeString": "OverPanel",
+      "path": "UIPanel/OverPanel"
     },
     {
-      "panelTypeString": "RoomPanel",
-      "path": "UIPanel/RoomPanel"
-    },
-    {
-      "panelTypeString": "HeadPortraitPanel",
-      "path": "UIPanel/HeadPortraitPanel"
+      "panelTypeString": "PausePanel",
+      "path": "UIPanel/PausePanel"
     },
     {
       "panelTypeString": "ToolTip",
       "path": "UIPanel/ToolTip"
+    },
+    {
+      "panelTypeString": "CareerPanel",
+      "path": "UIPanel/CareerPanel"
+    },
+    {
+      "panelTypeString": "CharacterPanel",
+      "path": "UIPanel/CharacterPanel"
+    },
+    {
+      "panelTypeString": "ShopPanel",
+      "path": "UIPanel/ShopPanel"
     }
   ]
 }

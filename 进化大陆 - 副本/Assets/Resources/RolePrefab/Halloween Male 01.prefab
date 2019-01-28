@@ -253,12 +253,9 @@ GameObject:
   - component: {fileID: 4144433136368740}
   - component: {fileID: 95447577849449932}
   - component: {fileID: 114917995721335962}
-  - component: {fileID: 114619454482914908}
-  - component: {fileID: 114782244298970876}
   - component: {fileID: 114588403469553216}
   - component: {fileID: 54576584539103350}
   - component: {fileID: 136480871460809736}
-  - component: {fileID: 114953822203153766}
   m_Layer: 0
   m_Name: Halloween Male 01
   m_TagString: Player
@@ -1430,49 +1427,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1329475809924188}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7c4697f3750fc4687b9701dac45efd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDis: 2
   originDis: 0.2
-  stopDis: 0.2
   isAttack: 0
   isAttacking: 0
-  attackRequest: {fileID: 0}
---- !u!114 &114619454482914908
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1329475809924188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 115
-    i1: 10
-    i2: 172
-    i3: 196
-    i4: 49
-    i5: 153
-    i6: 246
-    i7: 148
-    i8: 137
-    i9: 184
-    i10: 4
-    i11: 197
-    i12: 206
-    i13: 84
-    i14: 31
-    i15: 101
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
 --- !u!114 &114759665599917240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1506,27 +1468,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u5347\u7EA7"
---- !u!114 &114782244298970876
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1329475809924188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 1
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
 --- !u!114 &114871266754618156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1607,20 +1548,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b90f6b993b6e47e4aa6b9ed716fb3dd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userID: 0
   isLocal: 0
+  roleType: 0
+  attackPrefab: 
+  currentHP: 0
+  exp: 0
   slider: {fileID: 114917658784273232}
---- !u!114 &114953822203153766
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1329475809924188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5bb22d900e6589429107d7cfb98411c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  strength: 0
+  intellect: 0
+  agility: 0
+  stamina: 0
+  attack: 0
 --- !u!136 &136480871460809736
 CapsuleCollider:
   m_ObjectHideFlags: 1

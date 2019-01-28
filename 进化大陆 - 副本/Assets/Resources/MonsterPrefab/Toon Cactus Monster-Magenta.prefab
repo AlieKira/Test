@@ -95,13 +95,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4536909279769502}
   - component: {fileID: 95551425366275568}
-  - component: {fileID: 136766112178869064}
   - component: {fileID: 54943682379554032}
-  - component: {fileID: 114882029772348910}
   - component: {fileID: 195194566155317182}
-  m_Layer: 0
+  - component: {fileID: 135489228592248308}
+  m_Layer: 2
   m_Name: Toon Cactus Monster-Magenta
-  m_TagString: Monster
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,15 +128,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4275126530614218}
-  - component: {fileID: 135419659936939222}
-  - component: {fileID: 114599181137893462}
-  m_Layer: 2
+  - component: {fileID: 136479949235143862}
+  m_Layer: 0
   m_Name: Rig
-  m_TagString: Terrain
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1234579627245456
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,13 +810,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1227248205226716}
-  m_LocalRotation: {x: 0.50000006, y: -0.50000006, z: -0.49999997, w: 0.49999997}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4536909279769502}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
 --- !u!4 &4310227331169536
 Transform:
   m_ObjectHideFlags: 1
@@ -1430,19 +1428,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114599181137893462
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1227248205226716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8d1ca7fcbc881d48ae2469ee1b2728a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetPlayer: {fileID: 0}
-  thisGO: {fileID: 1174627430598756}
 --- !u!114 &114835143266628882
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1507,45 +1492,31 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114882029772348910
-MonoBehaviour:
+--- !u!135 &135489228592248308
+SphereCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1174627430598756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66063111b75d4ae4dac0f7f135b14e9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 114878516017630524}
-  number: 0
-  currentHP: 0
---- !u!135 &135419659936939222
-SphereCollider:
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 5
+  m_Center: {x: 0, y: 0.73, z: 0}
+--- !u!136 &136479949235143862
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1227248205226716}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 5
-  m_Center: {x: 0, y: 0.73, z: 0}
---- !u!136 &136766112178869064
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1174627430598756}
-  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.56
   m_Height: 2.1872132
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.96244085, z: 0}
+  m_Direction: 0
+  m_Center: {x: -1.08, y: 0, z: 0}
 --- !u!137 &137192328118244002
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

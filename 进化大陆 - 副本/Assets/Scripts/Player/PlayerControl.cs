@@ -1,38 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 
-public class PlayerControl : NetworkBehaviour
+public class PlayerControl : MonoBehaviour
 {
     private RoleData roleData;
     private Animator animator;
     private Vector3 mTargetPos;
-    private GameObject attackTarget;
-    public float attackDis = 3;
+    private Transform attackTarget;
+    private float attackDis = 3;
     public float originDis = 0.2f;
-    public float stopDis = 0.2f;
     public bool isAttack = false;
     public bool isAttacking = false;
-    public AttackRequest attackRequest;
     private bool isSyncAttack = false;
 
     private void Start()
     {
         roleData = GetComponent<RoleData>();
         animator = GetComponent<Animator>();
-        attackRequest = GetComponent<AttackRequest>();
         mTargetPos = transform.position;
     }
 
 
-    void Update()
+    protected void FixedUpdate()
     {
-        if (roleData.isLocal == false)
-        {
-            return;
-        }
-        //按下鼠标右键时
+
         if (Input.GetMouseButton(1) && (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") ||
                                       animator.GetCurrentAnimatorStateInfo(0).IsName("Run")))
         {
@@ -55,7 +47,10 @@ public class PlayerControl : NetworkBehaviour
                     transform.LookAt(mTargetPos);
                     //播放奔跑动画
                     transform.gameObject.GetComponent<Animator>().SetBool("Run", true);
-
+                    if (isAttack)
+                    {
+                        isAttack = false;
+                    }
                 }
                 //点击目标为敌人或怪物
                 if (mHit.collider.gameObject.tag == "Monster" || mHit.collider.gameObject.tag == "Enemy")
@@ -65,15 +60,11 @@ public class PlayerControl : NetworkBehaviour
                         return;
                     }
 
-                    attackTarget = mHit.collider.gameObject;
+                    attackTarget = mHit.collider.gameObject.transform.parent;
                     isAttack = true;
-                    stopDis = attackDis;
-                    //获取目标坐标
-                    mTargetPos.x = mHit.point.x;
-                    mTargetPos.y = transform.position.y;
-                    mTargetPos.z = mHit.point.z;
+                    //stopDis = attackDis;
                     //让主角面朝目标坐标并向目标移动
-                    transform.LookAt(mTargetPos);
+                    transform.LookAt(attackTarget.transform.position);
                     mTargetPos = mHit.collider.gameObject.transform.position;
                     float enemyDistance = Vector3.Distance(transform.position, mHit.collider.gameObject.transform.position);
 
@@ -99,88 +90,80 @@ public class PlayerControl : NetworkBehaviour
 
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || animator.GetCurrentAnimatorStateInfo(0).IsName("Run"))
         {
-            if (Vector3.Distance(transform.position, mTargetPos) > stopDis)
+            if (isAttack)
             {
-                mTargetPos.y = transform.position.y;
-                transform.LookAt(mTargetPos);
-                transform.Translate(Vector3.forward * 0.1F);
-            }
-            else
-            {
-                if (isAttack == true)
+                if (isAttacking)
                 {
-                    Attack();
-                    mTargetPos = transform.position;
-                    stopDis = originDis;
-                    isAttack = false;
+                    return;
+                }
+                if (Vector3.Distance(transform.position, attackTarget.transform.position) > attackDis)
+                {
+                    transform.LookAt(attackTarget.transform.position);
+                    transform.Translate(Vector3.forward * Time.deltaTime * 6);
                 }
                 else
                 {
+                    Attack();
+                }
+            }
+            else
+            {
+                if (Vector3.Distance(transform.position, mTargetPos) > originDis)
+                {
+                    transform.LookAt(mTargetPos);
+                    transform.Translate(Vector3.forward * Time.deltaTime * 6);
+                }
+                else
+                {
+
                     mTargetPos = transform.position;
                     animator.SetBool("Run", false);
                 }
             }
         }
-
-        if (isSyncAttack==true)
-        {
-            SyncAttack();
-            isSyncAttack = false;
-        }
-
     }
 
-    private void Attack()
+    protected virtual void Attack()
     {
-        transform.gameObject.GetComponent<Animator>().SetBool("Run", false);
+        if (attackTarget==null||attackTarget.tag=="Finish")
+        {
+            mTargetPos = this.transform.position;
+            animator.SetBool("Melee Right Attack 02", false);
+            isAttack = false;
+            return;
+        }
         isAttacking = true;
+        transform.gameObject.GetComponent<Animator>().SetBool("Run", false);
         animator.SetBool("Melee Right Attack 02", true);
         Invoke("AfterAttack", 1);
     }
 
-    private void AfterAttack()
+    protected virtual void AfterAttack()
     {
         animator.SetBool("Melee Right Attack 02", false);
+        if (attackTarget == null || attackTarget.tag == "Finish")
+        {
+            return;
+        }
+        GameManager.Instance.PlayNormalSound(Audios.Sound_ShootPerson);
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Melee Right Attack 02"))
         {
-            stopDis = originDis;
-            if (attackTarget.tag == "Monster")
+            if (Vector3.Distance(transform.position, attackTarget.transform.position) <= attackDis)
             {
-                attackRequest.SendRequest(attackTarget.transform.GetComponent<MonsterData>().Number, false);
-            }
-            else
-            {
-                attackRequest.SendRequest(attackTarget.transform.GetComponent<RoleData>().UserID, true);
+                GameManager.Instance.MonsterTakeDamage(attackTarget.gameObject);
             }
         }
 
         isAttacking = false;
     }
 
-    private void SyncAttack()
+    public void TakeDamage(int damage)
     {
-        transform.gameObject.GetComponent<Animator>().SetBool("Run", false);
-        isAttacking = true;
-        animator.SetBool("Melee Right Attack 02", true);
-        Invoke("SyncAfterAttack", 1);
-    }
-
-    private void SyncAfterAttack()
-    {
-        animator.SetBool("Melee Right Attack 02", false);
-        
-    }
-
-    public void TakeDamage()
-    {
-        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Melee Right Attack 02"))
+        if (!isAttack)
         {
             animator.SetTrigger("Take Damage");
+            
         }
-    }
-
-    public void OnAttackResponse()
-    {
-        isSyncAttack = true;
+        roleData.reduceHP(damage);
     }
 }

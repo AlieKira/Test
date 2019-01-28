@@ -238,13 +238,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4818113897369212}
   - component: {fileID: 95412029614645920}
-  - component: {fileID: 136642917194742996}
   - component: {fileID: 54308404289772064}
-  - component: {fileID: 114410340290829692}
   - component: {fileID: 195547122148595986}
-  m_Layer: 0
+  - component: {fileID: 135736183088890676}
+  m_Layer: 2
   m_Name: Toon Rock Golem-Green
-  m_TagString: Monster
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -454,15 +453,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4234988762601202}
-  - component: {fileID: 135279364916690116}
-  - component: {fileID: 114050121867100206}
-  m_Layer: 2
+  - component: {fileID: 136061275315689724}
+  m_Layer: 0
   m_Name: Rig
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1836081306847722
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,19 +1075,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114050121867100206
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1815408114220634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8d1ca7fcbc881d48ae2469ee1b2728a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetPlayer: {fileID: 0}
-  thisGO: {fileID: 1386391961960508}
 --- !u!114 &114214354301967454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1144,20 +1129,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114410340290829692
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1386391961960508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66063111b75d4ae4dac0f7f135b14e9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 114771421902407510}
-  number: 0
-  currentHP: 0
 --- !u!114 &114771421902407510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1233,31 +1204,31 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!135 &135279364916690116
+--- !u!135 &135736183088890676
 SphereCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1815408114220634}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 5
-  m_Center: {x: 0, y: 0.73, z: 0}
---- !u!136 &136642917194742996
-CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1386391961960508}
   m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 5
+  m_Center: {x: 0, y: 0.73, z: 0}
+--- !u!136 &136061275315689724
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1815408114220634}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.88
   m_Height: 2.2552848
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.2424471, z: 0}
+  m_Direction: 0
+  m_Center: {x: -1.23, y: 0, z: 0}
 --- !u!137 &137760772223166398
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

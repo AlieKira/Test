@@ -1,0 +1,67 @@
+﻿[
+  {
+    "roleTypeString": "Archer",
+    "prefabPath": "RolePrefab/Archer Male 01",
+    "maxHP": 1000,
+    "strength": 7,
+    "intellect": 3,
+    "agility": 13,
+    "stamina": 7,
+    "attack": 100,
+    "attackDis": 5,
+    "attackPrefab": "n",
+    "headPortrait": "RoleImage/m_03"
+  },
+  {
+    "roleTypeString": "Barbarian",
+    "prefabPath": "RolePrefab/Barbarian Male 01",
+    "maxHP": 200,
+    "strength": 11,
+    "intellect": 1,
+    "agility": 5,
+    "stamina": 13,
+    "attack": 8,
+    "attackDis": 2,
+    "attackPrefab": "n",
+    "headPortrait": "RoleImage/m_25"
+  },
+  {
+    "roleTypeString": "Casual",
+    "prefabPath": "RolePrefab/Halloween Male 01",
+    "maxHP": 100,
+    "strength": 7,
+    "intellect": 7,
+    "agility": 7,
+    "stamina": 7,
+    "attack": 8,
+    "attackDis": 2,
+    "attackPrefab": "n",
+    "headPortrait": "RoleImage/m_02"
+  },
+  {
+    "roleTypeString": "Knight",
+    "prefabPath": "RolePrefab/Knight Male 01",
+    "maxHP": 150,
+    "strength": 9,
+    "intellect": 6,
+    "agility": 6,
+    "stamina": 9,
+    "attack": 10,
+    "attackDis": 2,
+    "attackPrefab": "n",
+    "headPortrait": "RoleImage/m_07"
+  },
+  {
+    "roleTypeString": "Mage",
+    "prefabPath": "RolePrefab/Wizard Male 01",
+    "maxHP": 100,
+    "strength": 3,
+    "intellect": 20,
+    "agility": 3,
+    "stamina": 4,
+    "attack": 15,
+    "attackDis": 5,
+    "attackPrefab": "n",
+    "headPortrait": "RoleImage/m_26"
+  }
+]

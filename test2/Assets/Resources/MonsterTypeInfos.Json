@@ -1,0 +1,67 @@
+[
+  {
+    "monsterTypeString": "RockGolem",
+    "prefabPath": "MonsterPrefab/Toon Rock Golem-Green",
+    "maxHP": 100,
+    "attack":10,
+    "attackDis": 2,
+    "skillDis": 0,
+    "attackEffect": "n",
+    "skillEffect": "n",
+    "rangeMin": 0,
+    "rangeMax": 8,
+    "exp": 50 
+  },
+  {
+    "monsterTypeString": "Dragon",
+    "prefabPath": "MonsterPrefab/Toon Dragon-Purple",
+    "maxHP": 150,
+    "attack": 15,
+    "attackDis": 3,
+    "skillDis": 0,
+    "attackEffect": "n",
+    "skillEffect": "n",
+    "rangeMin": 8,
+    "rangeMax": 10,
+    "exp": 80
+  },
+  {
+    "monsterTypeString": "PlantMonster",
+    "prefabPath": "MonsterPrefab/Toon Plant Monster-Purple",
+    "maxHP": 50,
+    "attack": 5,
+    "attackDis": 2,
+    "skillDis": 4,
+    "attackEffect": "n",
+    "skillEffect": "n",
+    "rangeMin": 0,
+    "rangeMax": 4,
+    "exp": 20
+  },
+  {
+    "monsterTypeString": "Cactus",
+    "prefabPath": "MonsterPrefab/Toon Cactus Monster-Magenta",
+    "maxHP": 80,
+    "attack": 8,
+    "attackDis": 2,
+    "skillDis": 0,
+    "attackEffect": "n",
+    "skillEffect": "n",
+    "rangeMin": 0,
+    "rangeMax": 6,
+    "exp": 30
+  },
+  {
+    "monsterTypeString": "Ghost",
+    "prefabPath": "MonsterPrefab/Toon Ghost-Blue",
+    "maxHP": 60,
+    "attack": 12,
+    "attackDis": 2,
+    "skillDis": 0,
+    "attackEffect": "n",
+    "skillEffect": "n",
+    "rangeMin": 0,
+    "rangeMax": 8,
+    "exp": 40
+  }
+]

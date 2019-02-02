@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fcd318ee579d2c42b98cc530ee7e635, type: 3}
+  m_Name: gameobjectpool
+  m_EditorClassIdentifier: 
+  poolList:
+  - name: Cactus
+    prefab: {fileID: 1174627430598756, guid: 11a5b1a88a3a3e04c819d37eb5c7de41, type: 2}
+    maxAmount: 3
+  - name: Dragon
+    prefab: {fileID: 156912, guid: 336ebb66794dd5140b7f04d5c3ca3bb8, type: 2}
+    maxAmount: 1
+  - name: PlantMonster
+    prefab: {fileID: 1345660244601056, guid: d488b30ca520d094e9a0ceb509ed2846, type: 2}
+    maxAmount: 4
+  - name: RockGolem
+    prefab: {fileID: 1386391961960508, guid: 6d6a6fc921c5b984bb78078c6aeb053f, type: 2}
+    maxAmount: 2
+  - name: Ghost
+    prefab: {fileID: 114588, guid: 99a904156eb92af43bd3dbb779d975df, type: 2}
+    maxAmount: 3
